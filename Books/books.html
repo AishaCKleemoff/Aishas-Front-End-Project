@@ -3,22 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
+    <title>Aisha's Books</title>
     <link rel="stylesheet" type="text/css" href="books.css" />
-    <script src="./books.js"></script>
+    <script src="./books.js" defer></script>
 </head>
+<body>
 <header>
     <h1>Aisha Kleemoff's Books</h1>
   <nav>
     <a href="../index.html">Home</a>
   </nav>
 </header>
+<body>
 <main>
-  <div></div>
-  <section><article></article></section>
-  <section><article></article></section>
-</main>
-<aside></aside>
-<footer></footer>
+  <form>
+    <label>
+      Book Title 
+      <input id="title" name="title" type="text"/>
+    </label>
+    <label>
+      Author
+      <input id="author" name="title" type="text" />
+    </label>
+    <label>
+      Genre
+      <select id="genre" name="genre">
+        <option>-- Choose Genre --</option>
+        <option value="non-fiction">Non-Fiction</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="sct-fi">Science Fiction</option>
+      </select>
+    </label>
+    <fieldset>
+      <legend>Genres</legend>
+      <label>
+        Non-Fiction 
+        <input 
+        id="genre-non-fiction"
+        type="checkbox"
+        name="genre"
+        value="non-fiction"
+        />
+      </label>
+      <label>
+        Fiction 
+        <input
+        id="genre-fiction"
+        type="checkbox"
+        name="genre"
+        value="fiction"
+        />
+      </label>
+    </fieldset>
+    <input type="submit" valus="Create New Book" />
+  </form>
+  </main>
 </body>
 </html>
