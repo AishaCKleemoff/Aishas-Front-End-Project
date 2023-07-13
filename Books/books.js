@@ -15,9 +15,9 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const bookTitle = document.querySelector("#book-title").value;
-
+  console.log(bookTitle);
   fetch(
-    "https://book-finder1.p.rapidapi.com/api/search?series=Wings%20of%20fire&book_type=Fiction&lexile_min=600&lexile_max=800&results_per_page=25&page=1",
+    `https://book-finder1.p.rapidapi.com/api/search?title=${bookTitle}`,
     options
   )
     .then((data) => data.json())
@@ -26,10 +26,10 @@ form.addEventListener("submit", (event) => {
       JSONresponse;
 
       let foundBook = JSONresponse.results.find(
-        (book) => book.title_search === bookTitle
+        (book) => book.title === bookTitle
       );
       header.append(h2);
-      h2.textContent = `${foundBook.title_search}`;
+      h2.textContent = `${foundBook.title}`;
       console.log(bookTitle);
     });
 

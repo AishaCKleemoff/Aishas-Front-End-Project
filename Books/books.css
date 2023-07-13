@@ -1,7 +1,14 @@
 body {
     background-color: blanchedalmond;
+    background-image: url("../assets/books-corner-desk.avif");
 }
 
 a:hover {
     background-color: yellow;
   }
+
+  h1 {
+    color:brown;
+  }
+
+ 

@@ -1,5 +1,6 @@
 body {
     background-color: bisque;
+    background-image: url("./assets/window-books.avif");
 }
 
 a:hover {
