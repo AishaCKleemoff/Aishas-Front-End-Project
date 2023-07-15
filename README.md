@@ -1,8 +1,12 @@
 # Aisha's-Front-End-Project
 
 ## The Books App
-### This App always users to select books by :
-1. Book Title
+### This App always users :
+As a User I can navigate between pages.
+
+As a User I can view the book title from the Home page.
+
+As a User I can type in a book name and have the book name appear to the screen.
 
 
 
