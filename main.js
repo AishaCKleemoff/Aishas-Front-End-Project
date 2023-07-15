@@ -16,6 +16,7 @@ console.log(bookList);
 function newBook(book) {
   const newLi = document.createElement("li");
   newLi.textContent = `${book.title_search}`;
+  newLi.style.listStyle = `url('./assets/book-half.svg')`
   return newLi;
 }
 

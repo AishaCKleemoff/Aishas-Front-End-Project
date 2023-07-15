@@ -9,6 +9,7 @@ const options = {
 };
 
 const header = document.querySelector("header");
+const main = document.querySelector('main');
 const h2 = document.createElement("h2");
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
@@ -26,9 +27,9 @@ form.addEventListener("submit", (event) => {
       JSONresponse;
 
       let foundBook = JSONresponse.results.find(
-        (book) => book.title === bookTitle
+        (book) => book.title_search.toLowerCase() === bookTitle.toLowerCase()
       );
-      header.append(h2);
+      main.append(h2);
       h2.textContent = `${foundBook.title}`;
       console.log(bookTitle);
     });

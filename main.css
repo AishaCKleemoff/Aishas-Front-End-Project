@@ -27,6 +27,18 @@ a:hover {
 
   }
 
+  main {
+    
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 2fr;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+  }
+
   footer {
     background-color: blanchedalmond;
   }
