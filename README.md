@@ -1,7 +1,7 @@
 # Aisha's-Front-End-Project
 
 ## The Books App
-### This App always users :
+### This App allows users :
 As a User I can navigate between pages.
 
 As a User I can view the book title from the Home page.
