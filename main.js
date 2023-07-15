@@ -13,15 +13,19 @@ const options = {
 const bookList = document.querySelector("#book-list");
 console.log(bookList);
 
-const newLi = document.createElement("li");
+function newBook(book) {
+  const newLi = document.createElement("li");
+  newLi.textContent = `${book.title_search}`;
+  return newLi;
+}
 
 fetch(url, options)
   .then((data) => data.json())
   .then((JSONresponse) => {
     console.log(JSONresponse.results);
     JSONresponse.results.forEach((book) => {
-      newLi.textContent = book.title_search;
-      bookList.append(newLi);
+      
+      bookList.append(newBook(book))
     });
 
     /*for (let i = 0; i < JSONresponse.results.length; i++) {
@@ -30,4 +34,4 @@ fetch(url, options)
     /* */
   });
 
-  console.log(bookList)
+console.log(bookList);
