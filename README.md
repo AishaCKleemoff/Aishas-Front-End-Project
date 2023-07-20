@@ -8,6 +8,10 @@ As a User I can view the book title from the Home page.
 
 As a User I can type in a book name and have the book name appear to the screen.
 
+As a User I can see the author of the book.
+
+As a user I can see a summary of the book.
+
 
 
 
