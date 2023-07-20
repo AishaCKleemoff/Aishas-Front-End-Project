@@ -1,5 +1,3 @@
-console.log("Aisha's Front End Project");
-
 const options = {
   method: "GET",
   headers: {
@@ -11,7 +9,10 @@ const options = {
 const header = document.querySelector("header");
 const main = document.querySelector('main');
 const h2 = document.createElement("h2");
+const h3 = document.createElement("h3")
+const p = document.createElement("p")
 const form = document.querySelector("form");
+const article = document.createElement('article');
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -29,9 +30,18 @@ form.addEventListener("submit", (event) => {
       let foundBook = JSONresponse.results.find(
         (book) => book.title_search.toLowerCase() === bookTitle.toLowerCase()
       );
-      main.append(h2);
+      article.append(h2);
+      article.append(h3);
+      article.append(p);
+      main.append(article);
       h2.textContent = `${foundBook.title}`;
+      h3.textContent = `${foundBook.authors[0]}`;
+      p.textContent = `${foundBook.summary}`;
+
       console.log(bookTitle);
+      console.log(foundBook.summary);
+
+      createNewBook(foundBook.title);
     });
 
   form.reset();
